@@ -16,7 +16,7 @@ define('APP_PATH', dirname(dirname(__FILE__)) . DS . 'application' . DS);
 //定义web根目录
 define('WWW_ROOT', dirname(__FILE__) . DS);
 //定义CMS名称
-$sitename = "EFRPC";
+$sitename = "TdkDog";
 $lockFile = "." . DS . "install" . DS . "install.lock";
 if (is_file($lockFile)) {
     die("<script>window.location.href = '/run'</script>");
