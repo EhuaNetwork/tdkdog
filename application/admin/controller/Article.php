@@ -16,7 +16,7 @@ class Article extends Baseadmin
             $data=$data->where('type',$t);
         }
         if(!empty($k)){
-            $data=$data->where('title','like',"%$k%")->whereOr('url','like',"%$k%");
+            $data=$data->where('ecms_article.name','like',"%$k%")->whereOr('url','like',"%$k%");
         }
         if(!empty($ip)){
             $data=$data->where('server','=',$ip);

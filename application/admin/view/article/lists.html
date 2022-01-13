@@ -156,15 +156,14 @@
                                                         class="layui-icon "></i>巡查</a>
                                                 <a href="{:url('edit',['i'=>$dat['id']])}" class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
                                                         class="layui-icon layui-icon-edit"></i>编辑</a>
-                                                <a  onclick="dele('/zhitui/project/del?i={$dat.id}&ur={$ur}')" class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i
+                                                <a  href="{:url('del',['i'=>$dat['id']])}" class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i
                                                         class="layui-icon layui-icon-delete"></i>删除</a>
                                             </td>
 
                                             <td data-field="username" data-key="1-0-2" class="">
-                                                <div class="layui-table-cell laytable-cell-1-0-5">
-                                                    <a target="_blank" href="http://{$dat.url}">【{$dat.name}】</a>
-                                                    <br>
-                                                    <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&wd=site%3A{$dat.url}">{$dat.url}</a>
+                                                <div class=" laytable-cell-1-0-5">
+                                                    <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&wd=site%3A{$dat.url}" style="display: block">【{$dat.name}】</a>
+                                                    <a target="_blank" href="http://{$dat.url}" style="display: block">{$dat.url}</a>
                                                 </div>
                                             </td>
                                             <td data-field="username" data-key="1-0-2" class="">
@@ -292,7 +291,7 @@
             var key = $('#key').val()
             var t = $('.ttt').val()
 
-            window.location.href = '?t=' + t + '&key=' + key
+            window.location.href = '?t=' + t + '&k=' + key
             return;
         });
         $('.del').click(function () {
