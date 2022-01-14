@@ -1,11 +1,11 @@
 {
-    "name": "ehua/efrp",
-    "description": "efrp内网穿透系统",
+    "name": "ehua/tdkdog",
+    "description": "tdk巡逻狗系统",
     "type": "project",
     "keywords": [
-        "efrp"
+        "tdkdog"
     ],
-    "homepage": "http://efrp.ehua.pro/",
+    "homepage": "http://tdkdog.ehua.pro/",
     "license": "Apache-2.0",
     "authors": [
         {
