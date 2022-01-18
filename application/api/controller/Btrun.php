@@ -3,10 +3,10 @@
 
 namespace app\api\controller;
 
-use DtApp\Bt\BtException;
-use DtApp\Bt\Firewall;
-use DtApp\Bt\Site;
-use DtApp\Bt\Soft;
+use Ehua\Bt\BtException;
+use Ehua\Bt\Firewall;
+use Ehua\Bt\Site;
+use Ehua\Bt\Soft;
 
 /**
  * 宝塔站点导入
@@ -21,19 +21,6 @@ class Btrun
         if ($bool == false) {
             die;
         }
-        // +----------------------------------------------------------------------
-        // | 宝塔PHP扩展包
-        // +----------------------------------------------------------------------
-        // | 版权所有 2017~2020 [ https://www.dtapp.net ]
-        // +----------------------------------------------------------------------
-        // | 官方网站: https://gitee.com/liguangchun/bt
-        // +----------------------------------------------------------------------
-        // | 开源协议 ( https://mit-license.org )
-        // +----------------------------------------------------------------------
-        // | gitee 仓库地址 ：https://gitee.com/liguangchun/bt
-        // | github 仓库地址 ：https://github.com/GC0202/bt
-        // | Packagist 地址 ：https://packagist.org/packages/liguangchun/bt
-        // +----------------------------------------------------------------------
         $page = 1;
         $conf = $this->getapi(219);
         $config = [
@@ -41,30 +28,37 @@ class Btrun
             'panel' => "http://" . $conf['ip'] . ':' . $conf['port'] . "/",
         ];
 
-        try {
+//        try {
             $soft = new Site($config);
             $list = $soft->getList($page, 300);
-//            dd($list);
             foreach ($list['data'] as $dat) {
                 $man = $soft->getmain($dat['id']);
                 echo "<pre>";
                 $db_data = [
-                    'title' => $dat['ps'],
+                    'name' => $dat['ps'],
                     'server' => $conf['ip'],
                     'url' => $man['data'][0]['name'],
-                    'style' => 2,
+                    'type' => 4,
                 ];
                 try {
-                    db('project')->insert($db_data);
+//                    db('article')->insert($db_data);
                 } catch (\Exception $e) {
                     echo $e->getMessage();
                     echo "<br>";
                 }
+              $url=  $db_data['url'];
+              $name=  $db_data['name'];
+                echo <<<eof
+<a href="//$url" target="_blank">$name</a><br>
+eof;
+
+
             }
 
-        } catch (\Exception $e) {
-            var_dump($e->getMessage());
-        }
+
+//        } catch (\Exception $e) {
+//            var_dump($e->getMessage());
+//        }
 
 
     }
@@ -93,8 +87,8 @@ class Btrun
             ],
             181 => [
                 'ip' => '47.244.254.181',
-                'port' => '8888',
-                'key' => 'jcAI5fbJyOhvzOF2jMxS0I1EfLNX0R37',
+                'port' => '9999',
+                'key' => 'bLVLtp4GEqGA1PmBZoX34kGKQ1lllTGN',
             ],
             107 => [
                 'ip' => '120.53.23.107',
