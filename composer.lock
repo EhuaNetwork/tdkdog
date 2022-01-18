@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "08c21a7e2a93e95c82c3fae170be1727",
+    "content-hash": "bdb57f1456e9d4f73bd2e51054af11d0",
     "packages": [
         {
             "name": "ehua/tool",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/EhuaNetwork/EhuaTool.git",
-                "reference": "70fa4981eab4276bb4c0842f0a5f86d03717bc4b"
+                "reference": "b6931e6044a99ede48268eee6ee4cc918166ab8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EhuaNetwork/EhuaTool/zipball/70fa4981eab4276bb4c0842f0a5f86d03717bc4b",
-                "reference": "70fa4981eab4276bb4c0842f0a5f86d03717bc4b",
+                "url": "https://api.github.com/repos/EhuaNetwork/EhuaTool/zipball/b6931e6044a99ede48268eee6ee4cc918166ab8f",
+                "reference": "b6931e6044a99ede48268eee6ee4cc918166ab8f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -62,7 +62,7 @@
                 "issues": "https://github.com/EhuaNetwork/EhuaTool/issues",
                 "source": "https://github.com/EhuaNetwork/EhuaTool/tree/master"
             },
-            "time": "2022-01-12T01:47:27+00:00"
+            "time": "2022-01-18T04:47:44+00:00"
         },
         {
             "name": "electrolinux/phpquery",
